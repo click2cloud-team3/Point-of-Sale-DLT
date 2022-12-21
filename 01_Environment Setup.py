@@ -44,10 +44,10 @@ if 'config' not in locals():
 
 # DBTITLE 1,Config Settings for Azure IOT Hub 
 # config['iot_device_connection_string'] = 'YOUR IOT HUB DEVICE CONNECTION STRING HERE' # replace with your own credential here temporarily or set up a secret scope with your credential
-config['iot_device_connection_string'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_iot_hub_conn_string") 
+config['iot_device_connection_string'] = dbutils.secrets.get("solution-accelerator-cicd","pos-iot-device-conn-string") 
 
 # config['event_hub_compatible_endpoint'] = 'YOUR IOT HUB EVENT HUB COMPATIBLE ENDPOINT PROPERTY HERE' # replace with your own credential here temporarily or set up a secret scope with your credential
-config['event_hub_compatible_endpoint'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_iot_hub_endpoint") 
+config['event_hub_compatible_endpoint'] = dbutils.secrets.get("solution-accelerator-cicd","pos-iot-hub-endpoint") 
 
 # helper function to convert strings above into dictionaries
 def split_connstring(connstring):
@@ -84,12 +84,12 @@ config['eh_sasl'] = 'kafkashaded.org.apache.kafka.common.security.plain.PlainLog
 
 # DBTITLE 1,Config Settings for Azure Storage Account
 # config['storage_account_name'] = 'YOUR STORAGE ACCOUNT NAME STRING HERE' # replace with your own credential here temporarily or set up a secret scope with your credential
-config['storage_account_name'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_storage_account_name") 
+config['storage_account_name'] = dbutils.secrets.get("solution-accelerator-cicd","pos-storage-account-name") 
 
 config['storage_container_name'] = 'pos'
 
 # config['storage_account_access_key'] = 'YOUR STORAGE ACCOUNT ACCESS KEY HERE' # replace with your own credential here temporarily or set up a secret scope with your credential
-config['storage_account_access_key'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_storage_account_key") 
+config['storage_account_access_key'] = dbutils.secrets.get("solution-accelerator-cicd","pos-storage-account-key") 
 
 config['storage_connection_string'] = 'DefaultEndpointsProtocol=https;AccountName={0};AccountKey={1};EndpointSuffix=core.windows.net'.format(config['storage_account_name'], config['storage_account_access_key'])
 

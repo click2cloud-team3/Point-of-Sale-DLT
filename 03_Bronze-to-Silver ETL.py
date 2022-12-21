@@ -51,8 +51,8 @@ config = {}
 config['dbfs_mount_name'] = f'/mnt/pos'
 
 # iot hub config
-config['iot_device_connection_string'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_iot_hub_conn_string")# 'OR YOUR IOT HUB DEVICE CONNECTION STRING HERE'
-config['event_hub_compatible_endpoint'] = dbutils.secrets.get("solution-accelerator-cicd","rcg_pos_iot_hub_endpoint") # 'YOUR IOT HUB EVENT HUB COMPATIBLE ENDPOINT PROPERTY HERE'
+config['iot_device_connection_string'] = dbutils.secrets.get("solution-accelerator-cicd","pos-iot-device-conn-string")   # 'OR YOUR IOT HUB DEVICE CONNECTION STRING HERE'
+config['event_hub_compatible_endpoint'] = dbutils.secrets.get("solution-accelerator-cicd","pos-iot-hub-endpoint")        # 'YOUR IOT HUB EVENT HUB COMPATIBLE ENDPOINT PROPERTY HERE'
 
 # COMMAND ----------
 
